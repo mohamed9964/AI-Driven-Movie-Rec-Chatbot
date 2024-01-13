@@ -31,3 +31,18 @@ This repository hosts an AI-driven chatbot designed to revolutionize the movie s
 - Designed conversation flows and intents using Dialogflow.
 - Integrated the recommendation system with a Flask backend.
 - Deployed using ngrok for real-time interaction.
+
+## File Structure and Usage
+
+### Files Submitted:
+- **`recommendation_system(G12).ipynb`:** The main recommendation system script for data preprocessing and exporting the "movies_df(G12).csv" for use in recommendations.
+- **`Clust_class(G12).ipynb`:** Contains the classification and clustering models.
+- **`flask(G12).py`:** The Flask script that must be run 24/7 on a dedicated terminal to enable chatbot connectivity. It utilizes "ngrok" for connectivity and contains the necessary recommendation functions.
+- **`movies_df.csv`:** The data preprocessed by the recommendation script and used by the Flask script for recommendations.
+
+### Steps for Using the Chatbot:
+1. Ensure you have access to Dialogflow.
+2. Run ngrok and enter the command `ngrok.exe http 5000`.
+3. Take the IP provided by ngrok and enter it into the fulfillment section in Dialogflow, appending `/webhook` at the end to reflect our webhook in the Flask script.
+4. Run the Flask script.
+5. Open Dialogflow to start using the chatbot.
